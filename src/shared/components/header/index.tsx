@@ -1,6 +1,7 @@
 import "./index.scss";
 import { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
+import HamburgersAside from "./hamburgers-aside";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -14,24 +15,28 @@ const Header = () => {
   ];
 
   return (
-    <header id="header-container">
-      <nav>
-        {navItems.map((navItem, index) => (
-          <a key={`header-nav-item-${index}`} href={navItem.path}>
-            {navItem.label}
-          </a>
-        ))}
-      </nav>
+    <section>
+      <header id="header-container">
+        <nav id="computer-menu">
+          {navItems.map((navItem, index) => (
+            <a key={`header-nav-item-${index}`} href={navItem.path}>
+              {navItem.label}
+            </a>
+          ))}
+        </nav>
 
-      <div id="hamburger-menu">
-        <Hamburger
-          color="var(--color-secondary-dark)"
-          size={20}
-          toggled={isMenuOpen}
-          toggle={setMenuOpen}
-        />
-      </div>
-    </header>
+        <div id="hamburger-menu">
+          <Hamburger
+            color="var(--color-secondary-dark)"
+            size={20}
+            toggled={isMenuOpen}
+            toggle={setMenuOpen}
+          />
+        </div>
+      </header>
+
+      {isMenuOpen && <HamburgersAside navItems={navItems} />}
+    </section>
   );
 };
 

@@ -10,7 +10,7 @@
     display: none;
   }
 
-  nav {
+  #computer-menu {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -28,7 +28,7 @@
   }
 
   @media (max-width: 768px) {
-    nav {
+    #computer-menu {
       display: none;
     }
 
