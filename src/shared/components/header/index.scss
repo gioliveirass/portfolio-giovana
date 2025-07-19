@@ -6,6 +6,10 @@
   box-shadow: var(--shadow-default);
   justify-content: end;
 
+  #hamburger-menu {
+    display: none;
+  }
+
   nav {
     display: flex;
     flex-direction: row;
@@ -20,6 +24,16 @@
       &:hover {
         color: var(--color-secondary);
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+    }
+
+    #hamburger-menu {
+      display: flex;
     }
   }
 }

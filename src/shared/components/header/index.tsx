@@ -1,8 +1,12 @@
 import "./index.scss";
+import { useState } from "react";
+import { Squash as Hamburger } from "hamburger-react";
 
 const Header = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
   const navItems = [
-    { label: "Início", path: "init" },
+    { label: "Início", path: "/" },
     { label: "Sobre mim", path: "about-me" },
     { label: "Meus serviços", path: "my-services" },
     { label: "Portfólio", path: "portfolio" },
@@ -18,6 +22,15 @@ const Header = () => {
           </a>
         ))}
       </nav>
+
+      <div id="hamburger-menu">
+        <Hamburger
+          color="var(--color-secondary-dark)"
+          size={20}
+          toggled={isMenuOpen}
+          toggle={setMenuOpen}
+        />
+      </div>
     </header>
   );
 };
