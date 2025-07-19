@@ -1,0 +1,25 @@
+#header-container {
+  background: var(--color-primary);
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  box-shadow: var(--shadow-default);
+  justify-content: end;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    a {
+      text-decoration: none;
+      color: var(--color-secondary-dark);
+      font-weight: bold;
+      transition: color 0.5s ease;
+
+      &:hover {
+        color: var(--color-secondary);
+      }
+    }
+  }
+}
