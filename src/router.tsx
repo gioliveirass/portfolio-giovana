@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 
 import MainLayout from "./shared/layouts/main-layout";
 import Homepage from "./pages/homepage";
+import Error from "./pages/error";
 
 export const appPaths = {
   homepage: "/",
@@ -9,9 +10,14 @@ export const appPaths = {
 
 const router = createBrowserRouter([
   {
-    path: appPaths.homepage,
-    element: <MainLayout />,
-    children: [{ index: true, Component: Homepage }],
+    errorElement: <Error />,
+    children: [
+      {
+        path: appPaths.homepage,
+        element: <MainLayout />,
+        children: [{ index: true, Component: Homepage }],
+      },
+    ],
   },
 ]);
 

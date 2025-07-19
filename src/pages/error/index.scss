@@ -1,0 +1,10 @@
+#error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+
+  h1 {
+    color: var(--color-gray);
+  }
+}
