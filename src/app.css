@@ -1,0 +1,45 @@
+:root {
+  --shadow-default: 4px 4px 12px 0px rgba(30, 30, 30, 0.23);
+
+  --font-title: "Playfair Display", serif;
+  --font-text: "EB Garamond", serif;
+
+  --color-primary-light: #cedda0;
+  --color-primary: #9da680;
+  --color-primary-dark: #525d2f;
+
+  --color-secondary-light: #d0886d;
+  --color-secondary: #73321a;
+  --color-secondary-dark: #36170b;
+
+  --color-white: #e3e3e3;
+  --color-gray: #a8a8a8;
+  --color-black: #1a1a1a;
+}
+
+body {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  color: var(--color-black);
+  background: var(--color-white);
+}
+
+body h1 {
+  font-family: var(--font-title);
+  font-size: 2rem;
+}
+
+body h2 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+}
+
+body h3 {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+}
+
+body h4 {
+  font-family: var(--font-title);
+  font-size: 1rem;
+}
