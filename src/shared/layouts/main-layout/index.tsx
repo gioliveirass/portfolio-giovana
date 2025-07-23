@@ -1,4 +1,3 @@
-import "./index.scss";
 import { Outlet } from "react-router";
 
 const MainLayout = () => {
