@@ -1,10 +1,16 @@
 import "./index.scss";
+import HamburgersAside from "./hamburgers-aside";
+import { useMediaQuery } from "react-responsive";
+import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
-import HamburgersAside from "./hamburgers-aside";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  const MotionHamburgersAside = motion.create(HamburgersAside);
 
   const navItems = [
     { label: "Início", path: "/" },
@@ -35,7 +41,17 @@ const Header = () => {
         </div>
       </header>
 
-      {isMenuOpen && <HamburgersAside navItems={navItems} />}
+      <AnimatePresence initial={false}>
+        {isMenuOpen && isMobile && (
+          <MotionHamburgersAside
+            navItems={navItems}
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 };

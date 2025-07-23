@@ -1,5 +1,4 @@
 #hamburgers-aside {
-  display: none;
   position: fixed;
   right: 0;
   background: var(--color-primary-dark);
@@ -26,11 +25,5 @@
         color: var(--color-secondary);
       }
     }
-  }
-}
-
-@media (max-width: 768px) {
-  #hamburgers-aside {
-    display: block;
   }
 }
