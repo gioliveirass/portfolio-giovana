@@ -1,5 +1,5 @@
 import "./index.scss";
-import HamburgersAside from "./hamburgers-aside";
+import HamburgersAside from "./components/hamburgers-aside";
 import { useMediaQuery } from "react-responsive";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
