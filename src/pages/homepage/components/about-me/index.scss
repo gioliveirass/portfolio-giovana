@@ -1,0 +1,25 @@
+#about-me-container {
+  padding: 8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+
+  article {
+    max-width: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
+    h1 {
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+  }
+}
