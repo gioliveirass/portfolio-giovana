@@ -1,3 +1,4 @@
+import Button from "../../../../shared/components/button";
 import "./index.scss";
 import { useMediaQuery } from "react-responsive";
 
@@ -22,6 +23,7 @@ const Home = () => {
             de aplicações web responsivas, adaptadas a diferentes perfis de
             clientes.
           </p>
+          <Button label="+ Saber mais" />
         </main>
 
         <img

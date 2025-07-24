@@ -1,0 +1,19 @@
+.custom-btn {
+  background-color: var(--color-secondary-dark);
+  color: var(--color-white);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  width: fit-content;
+  transition: background-color 0.5s ease;
+
+  p {
+    margin: 0 !important;
+  }
+
+  &:hover {
+    background-color: var(--color-secondary);
+  }
+}
